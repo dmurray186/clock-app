@@ -6,6 +6,7 @@ html {
     background-size: cover; /* Resize the background image to cover the entire container */
     background-attachment: fixed;
     color: white;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 html.day {
@@ -14,6 +15,16 @@ html.day {
 }
 
 html.night {
-    background-image: url("/images/sky-night.jpg");
+    background-image: url("/images/moon-night.jpg");
 
+}
+
+h1#time {
+    font-size: 8rem;
+}
+
+div.container {
+    margin-top: 10%;
+    margin-left: 5%;
+    line-height: 0.25;
 }

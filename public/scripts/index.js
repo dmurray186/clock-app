@@ -2,6 +2,7 @@
 
 const date = new Date();
 const currentTime = date.getHours();
+console.log(currentTime)
 
 if (currentTime > 0 && currentTime < 12) {
   document.querySelector("html").className = "day"
@@ -9,10 +10,11 @@ if (currentTime > 0 && currentTime < 12) {
   } else if (currentTime > 12 && currentTime < 18) {
     document.querySelector("html").className = "day"
     document.querySelector("#greeting").innerHTML = "Good Afternoon Dan, it's currently"
-  } else if (currentTime > 18 && currentTime < 0) {
+  } else if (currentTime > 18 && currentTime < 24) {
     document.querySelector("html").className = "night"
     document.querySelector("#greeting").innerHTML = "Good Evening Dan, it's currently"
   }
+
 
 
   async function getData() {
