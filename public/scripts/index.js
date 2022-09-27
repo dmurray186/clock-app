@@ -4,17 +4,19 @@ const date = new Date();
 const currentTime = date.getHours();
 console.log(currentTime)
 
-if (currentTime > 0 && currentTime < 12) {
+if (currentTime >= 5 && currentTime < 12) {
   document.querySelector("html").className = "day"
   document.querySelector("#greeting").innerHTML = "Good Morning Dan, it's currently"
-  } else if (currentTime > 12 && currentTime < 18) {
+  } else if (currentTime >= 12 && currentTime < 18) {
     document.querySelector("html").className = "day"
     document.querySelector("#greeting").innerHTML = "Good Afternoon Dan, it's currently"
-  } else if (currentTime > 18 && currentTime < 24) {
+  } else if (currentTime >= 18) {
     document.querySelector("html").className = "night"
     document.querySelector("#greeting").innerHTML = "Good Evening Dan, it's currently"
-  }
-
+  } else if (currentTime >= 0 && currentTime < 5) {
+    document.querySelector("html").className = "night"
+    document.querySelector("#greeting").innerHTML = "Good Evening Dan, it's currently"
+}
 
 
   async function getData() {
@@ -33,6 +35,12 @@ if (currentTime > 0 && currentTime < 12) {
 
       console.log(data[num].author)
       console.log(data[num].text)
+
+      let author = data[num].author
+      let quote = data[num].text
+
+      document.querySelector("#quote2").innerHTML = quote
+      document.querySelector("#author2").innerHTML = "-" + author
   }
 
   renderData();
