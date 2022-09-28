@@ -2,7 +2,6 @@
 
 const date = new Date();
 const currentTime = date.getHours();
-console.log(currentTime)
 
 if (currentTime >= 5 && currentTime < 12) {
   document.querySelector("html").className = "day"
@@ -17,6 +16,20 @@ if (currentTime >= 5 && currentTime < 12) {
     document.querySelector("html").className = "night"
     document.querySelector("#greeting").innerHTML = "Good Evening Dan, it's currently"
 }
+
+document.querySelector("#info").addEventListener("click", function() {
+  if (document.querySelector("#table-div").style.display === "none") {
+    document.querySelector("#table-div").style.display = "block";
+    document.querySelector(".container").style.marginTop = "0px";
+    document.querySelector(".quote-div").style.display = "none";
+  } else if (document.querySelector("#table-div").style.display === "block") {
+    document.querySelector("#table-div").style.display = "none";
+    document.querySelector(".container").style.marginTop = "200px";
+    document.querySelector(".quote-div").style.display = "block";
+
+  }
+});
+
 
 
   async function getData() {
@@ -36,11 +49,11 @@ if (currentTime >= 5 && currentTime < 12) {
       console.log(data[num].author)
       console.log(data[num].text)
 
-      let author = data[num].author
-      let quote = data[num].text
-
-      document.querySelector("#quote2").innerHTML = quote
-      document.querySelector("#author2").innerHTML = "-" + author
+      // let author = data[num].author
+      // let quote = data[num].text
+      //
+      // document.querySelector("#quote2").innerHTML = quote
+      // document.querySelector("#author2").innerHTML = "-" + author
   }
 
   renderData();

@@ -25,15 +25,19 @@ app.get("/", function(req, res){
 			const quote = quotesData[0].q
 			const author = quotesData[0].a
 
-		const clock_url = "https://worldtimeapi.org/api/ip"
+	const clock_url = "https://worldtimeapi.org/api/ip"
 
-		https.get(clock_url, function(response){
-        console.log(response.statusCode);
+	https.get(clock_url, function(response){
+      console.log(response.statusCode);
 
       response.on("data", function(data){
         const clockData = JSON.parse(data)
         const clockTime = clockData.datetime
 				const location = clockData.timezone
+				const abbreviation = clockData.abbreviation
+				const dayOfWeek = clockData.day_of_week
+				const dayOfYear = clockData.day_of_year
+				const weekNumber = clockData.week_number
 
 					function padTo2Digits(num) {
   					return String(num).padStart(2, '0');
@@ -48,9 +52,14 @@ app.get("/", function(req, res){
 
 				res.render("index", {
 					displayTime: newTime,
+					displayAbb: abbreviation,
 					displayLocation: newLocation,
 					displayQuote: quote,
-					displayAuthor: author
+					displayAuthor: author,
+					displayZone: location,
+					displayDayWeek: dayOfWeek,
+					displayDayYear: dayOfYear,
+					displayWeekNumber: weekNumber
 		 		});
 
 			});
@@ -58,6 +67,7 @@ app.get("/", function(req, res){
 	});
  });
 });
+
 
 
 

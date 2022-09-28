@@ -10,7 +10,7 @@ html {
 }
 
 html.day {
-    background-image: url("/images/woods-day.jpg");
+    background-image: url("/images/hills-day.jpg");
 
 }
 
@@ -20,11 +20,64 @@ html.night {
 }
 
 h1#time {
-    font-size: 8rem;
+    font-size: 10rem;
+    font-weight: 800;
+    display: inline-block;
+}
+
+h2#abb {
+  display: inline-block;
+}
+
+h3#greeting, #location {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+div.quote-div {
+  width: 40%;
+  margin-left: 3%;
 }
 
 div.container {
-    margin-top: 10%;
-    margin-left: 5%;
-    line-height: 0.25;
+    /* margin-top: 16%; */
+    margin-left: 3%;
+    line-height: 0;
+}
+
+button#info {
+  padding: 15px;
+  float: right;
+  margin-top: -5%;
+}
+
+
+div#table-div {
+  background-color: silver;
+  margin-top: 10%;
+  /* display: none; */
+}
+
+tr, th, td {
+  padding: 15px;
+  margin: 10px;
+  text-align: left;
+  border: 2px black solid;
+
+}
+
+table {
+  border: 2px black solid;
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+.visible {
+  display: none;
 }
