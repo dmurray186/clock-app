@@ -7,16 +7,22 @@ html {
     background-attachment: fixed;
     color: white;
     font-family: 'Nanum Myeongjo', serif;
+    /* background-image: url("public/images/hills-day.jpg"); */
+
 }
 
 html.day {
-    background-image: url("/images/hills-day.jpg");
+    background-image: url("../images/hills-day.jpg");
 
 }
 
 html.night {
-    background-image: url("/images/moon-night.jpg");
+    background-image: url("../images/moon-night.jpg");
 
+}
+
+body {
+  margin: 0;
 }
 
 h1#time {
@@ -49,30 +55,49 @@ button#info {
   padding: 15px;
   float: right;
   margin-top: -5%;
+  cursor: pointer;
 }
 
 
 div#table-div {
   background-color: silver;
   margin-top: 10%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   /* display: none; */
 }
 
+th {
+  font-style: italic;
+}
+
+td {
+  font-size: 2rem;
+}
+
+th, td {
+  padding: 5px 65px;
+}
+
 tr, th, td {
-  padding: 15px;
-  margin: 10px;
+  /* padding: 20px; */
+  /* margin-left: 70px; */
   text-align: left;
-  border: 2px black solid;
+  /* border: 2px black solid; */
 
 }
 
 table {
-  border: 2px black solid;
+  /* border: 2px black solid; */
   color: black;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  /* border-spacing: 10px; */
 }
 
 
