@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('view engine', 'ejs');
 
+app.get("/x", function(req, res){
+	res.sendFile(__dirname + "/views/index.html")
+});
 
 app.get("/", function(req, res){
 

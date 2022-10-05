@@ -24,7 +24,7 @@ document.querySelector("#info").addEventListener("click", function() {
     document.querySelector(".quote-div").style.display = "none";
   } else if (document.querySelector("#table-div").style.display === "block") {
     document.querySelector("#table-div").style.display = "none";
-    document.querySelector(".container").style.marginTop = "200px";
+    document.querySelector(".container").style.marginTop = "27%";
     document.querySelector(".quote-div").style.display = "block";
 
   }

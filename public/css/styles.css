@@ -7,8 +7,6 @@ html {
     background-attachment: fixed;
     color: white;
     font-family: 'Nanum Myeongjo', serif;
-    /* background-image: url("public/images/hills-day.jpg"); */
-
 }
 
 html.day {
@@ -17,7 +15,7 @@ html.day {
 }
 
 html.night {
-    background-image: url("../images/moon-night.jpg");
+    background-image: url("../images/city4-night.jpg");
 
 }
 
@@ -55,6 +53,7 @@ button#info {
   padding: 15px;
   float: right;
   margin-top: -5%;
+  margin-right: 10%;
   cursor: pointer;
 }
 
@@ -65,8 +64,8 @@ div#table-div {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   /* display: none; */
 }
 
@@ -83,21 +82,19 @@ th, td {
 }
 
 tr, th, td {
-  /* padding: 20px; */
-  /* margin-left: 70px; */
   text-align: left;
-  /* border: 2px black solid; */
+   /*border: 2px black solid;*/
 
 }
 
 table {
-  /* border: 2px black solid; */
+   /*border: 2px black solid;*/
   color: black;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  /* border-spacing: 10px; */
+   border-spacing: 100px 20px;
 }
 
 
